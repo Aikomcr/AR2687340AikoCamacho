@@ -15,4 +15,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "app2687340a"
 include(":app")
- 
+include(":modulouno")
+include(":lib")

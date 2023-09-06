@@ -1,16 +1,18 @@
 plugins {
     id("com.android.application")
+    id("com.google.gms.google-services")
     id("org.jetbrains.kotlin.android")
+
 }
 
 android {
     namespace = "com.example.app2687340_juan_pablo_suarez_rincon"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.app2687340_juan_pablo_suarez_rincon"
         minSdk = 27
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -51,7 +53,14 @@ android {
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.9.0")
+    //Dependecias de google maps
+
+    implementation (platform('com.google.android.gms:play-services-maps:17.0.1'))
+    implementation (platform('com.google.android.gms:play-services-location:18.0.0'))
+
+    implementation(platform("com.google.firebase:firebase-bom:32.2.2"))
+
+    implementation("androidx.core:core-ktx:1.10.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
     implementation("androidx.activity:activity-compose:1.7.2")
     implementation(platform("androidx.compose:compose-bom:2023.03.00"))
